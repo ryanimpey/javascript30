@@ -1,16 +1,15 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-    document.addEventListener("keydown", ({keyCode}) => {
-            let item = document.getElementsByClassName("drumkit-button")[keyCodeEnum[keyCode]]
-            item.classList.add("yellow-border")
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("keydown", ({ keyCode }) => {
+        let item = document.getElementsByClassName("drumkit-button")[keyCodeEnum[keyCode]]
+        item.classList.add("yellow-border")
     })
 
-    document.addEventListener("keyup", () => {
+    document.addEventListener("keyup", ({ keyCode }) => {
         let items = document.getElementsByClassName("drumkit-button");
-        for(let i = 0; i < items.length; i++) {
-            items[i].classList.remove("yellow-border");
-        }
+        let item = document.getElementsByClassName("drumkit-button")[keyCodeEnum[keyCode]]
+        item.classList.remove("yellow-border")
     })
-  });
+});
 
 const keyCodeEnum = {
     65: 0,
