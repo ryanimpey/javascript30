@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: inherit;
+    width: 100%;
+    background: url("https://images.unsplash.com/photo-1544785316-6e58aed68a50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat center center;
+}
+
+#drumkit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.drumkit-button {
+    height: 64px;
+    width: 64px;
+    margin: 8px;
+    border: 3px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 4px
+}
+
+.drumkit-button p:first-of-type {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.drumkit-button p:last-of-type {
+    padding-top: 8px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+p {
+    margin: 0
+}
+
+.yellow-border {
+    border: 3px solid orange !important;
+    box-shadow: 0px 0px 25px orange;
+}
+
+@media screen and (min-width: 960px) {
+    #drumkit-container {
+        flex-direction: row;
+        height: 100%;
+    }
+}
